@@ -1,3 +1,4 @@
+THIS WAS INIITIALLY AS PART OF MY COLLEGE PROJECT
 `timescale 1ns / 1ps
 
 module atm_fsm_tb;
