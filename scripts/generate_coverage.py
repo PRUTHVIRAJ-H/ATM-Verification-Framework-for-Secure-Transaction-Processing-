@@ -1,8 +1,8 @@
 from pathlib import Path
-import sys
 
 ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT))
+REPORTS = ROOT / "reports"
+REPORTS.mkdir(exist_ok=True)
 
 from sim.atm_server import run_verilog_simulation
 
@@ -77,10 +77,10 @@ for a, b in sorted(all_transitions):
 
 text = "\n".join(report)
 
-outfile = Path("coverage.txt")
+outfile = REPORTS / "coverage.txt"
 outfile.write_text(text)
 
 print(text)
 print()
-print("Coverage written to coverage.txt")
+print("Coverage written to reports/coverage.txt")
 
