@@ -143,6 +143,13 @@ td, th {{
 </tr>
 """
 
+html += """
+<div class="card">
+<h2>ATM FSM</h2>
+<img src="fsm.png" width="900">
+</div>
+"""
+
 for s in sorted(all_states):
     html += f"""
 <tr>
