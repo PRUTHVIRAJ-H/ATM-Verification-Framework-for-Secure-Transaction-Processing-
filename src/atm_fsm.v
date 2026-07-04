@@ -252,7 +252,7 @@ end
 // Waveforms
 //====================================================
 initial begin
-    $dumpfile("sim/atm_waves.vcd");
+    $dumpfile("reports/atm_waves.vcd");
     $dumpvars(0, atm_fsm);
 end
 
