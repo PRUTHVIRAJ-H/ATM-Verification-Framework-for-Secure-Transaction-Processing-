@@ -41,15 +41,17 @@ def main():
     run(
         [
             sys.executable,
-            "scripts/generate_coverage.py",
+            "-m",
+            "scripts.generate_coverage",
         ]
     )
 
     print("\n3. Generating dashboard...")
     run(
         [
-            sys.executable,
-            "scripts/generate_dashboard.py",
+           sys.executable,
+           "-m",
+           "scripts.generate_dashboard",
         ]
     )
 
