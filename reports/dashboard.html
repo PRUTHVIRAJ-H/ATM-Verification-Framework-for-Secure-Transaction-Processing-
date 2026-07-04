@@ -1,0 +1,134 @@
+
+<html>
+<head>
+<title>ATM Verification Dashboard</title>
+<style>
+body {
+    font-family: Arial;
+    background: #f5f7fb;
+    margin: 40px;
+}
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+}
+.good {
+    color: green;
+    font-size: 30px;
+    font-weight: bold;
+}
+table {
+    border-collapse: collapse;
+}
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>ATM FSM Verification Dashboard</h1>
+
+<div class="card">
+<h2>Test Summary</h2>
+<p class="good">5 Passed</p>
+<p>0 Failed</p>
+</div>
+
+<div class="card">
+<h2>State Coverage</h2>
+<p class="good">91.67%</p>
+</div>
+
+<div class="card">
+<h2>Visited States</h2>
+
+<table>
+<tr>
+<th>State ID</th>
+<th>Name</th>
+</tr>
+
+<div class="card">
+<h2>ATM FSM</h2>
+<img src="fsm.png" width="900">
+</div>
+
+<tr>
+<td>0</td>
+<td>HOME</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>CARD_READ</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>PIN_ENTRY</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>AUTH_CHECK</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>MENU</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>BALANCE</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>WITHDRAW</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>DISPENSE</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>TRANSACTION_END</td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>EJECT_CARD</td>
+</tr>
+
+<tr>
+<td>15</td>
+<td>ERROR</td>
+</tr>
+
+</table>
+</div>
+
+<div class="card">
+<h2>Transitions</h2>
+<ul>
+<li>0 → 1</li><li>1 → 2</li><li>1 → 15</li><li>2 → 3</li><li>3 → 4</li><li>3 → 9</li><li>4 → 5</li><li>4 → 6</li><li>5 → 8</li><li>6 → 7</li><li>6 → 15</li><li>7 → 8</li><li>8 → 9</li><li>9 → 0</li><li>15 → 9</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Waveform</h2>
+<p>sim/atm_waves.vcd</p>
+<p>Open using GTKWave.</p>
+</div>
+
+</body>
+</html>
