@@ -25,6 +25,15 @@ def run(cmd):
 def main():
     print("\nATM FSM Verification Demo\n")
 
+    print("\n0. Cleaning previous artifacts...")
+    run(
+        [
+            sys.executable,
+            "-m",
+            "scripts.clean",
+        ]
+    )
+
     print("\n1. Running unit tests...")
     run(
         [
@@ -49,9 +58,9 @@ def main():
     print("\n3. Generating dashboard...")
     run(
         [
-           sys.executable,
-           "-m",
-           "scripts.generate_dashboard",
+            sys.executable,
+            "-m",
+            "scripts.generate_dashboard",
         ]
     )
 
@@ -67,4 +76,3 @@ def main():
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
